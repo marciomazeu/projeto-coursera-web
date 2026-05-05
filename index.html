@@ -7,14 +7,16 @@
     <title>Meu Portfólio Profissional</title>
 </head>
 <body>
-
+<a href="#sobre" class="skip-link">Pular para o conteúdo principal</a>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#sobre">Sobre Mim</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
+        <button id="btn-mobile" aria-haspopup="true" aria-expanded="false" aria-label="Abrir Menu">
+        Menu
+        </button>
+        <nav id="nav">
+        <ul role="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+        </ul>
         </nav>
     </header>
 
@@ -27,11 +29,31 @@
 
         <section id="habilidades">
             <h2>Minhas Habilidades</h2>
-            <ul>
-                <li>HTML5 Semântico</li>
-                <li>CSS3 Responsivo</li>
-                <li>JavaScript Básico</li>
+            <ul id="habilidades-lista">
+                <li data-nivel="90%">HTML5 Semântico</li>
+                <li data-nivel="85%">CSS3 Responsivo</li>
+                <li data-nivel="70%">JavaScript Básico</li>
             </ul>
+            <p id="skill-feedback" aria-live="polite" style="height: 20px; font-weight: bold; color: #27ae60;"></p>
+        </section>
+
+        <section id="portfolio">
+            <h2>Meus Exercícios</h2>
+            <div class="filtros">
+                <button class="filter-btn" data-type="all">Todos</button>
+                <button class="filter-btn" data-type="html">HTML</button>
+                <button class="filter-btn" data-type="js">JavaScript</button>
+            </div>
+            <div class="projetos-grid">
+                <article class="projeto-card" data-category="html">
+                    <h3>Projeto Estrutura</h3>
+                    <p>Foco em tags semânticas.</p>
+                </article>
+                <article class="projeto-card" data-category="js">
+                    <h3>Projeto Interativo</h3>
+                    <p>Uso de manipulação de DOM.</p>
+                </article>
+            </div>
         </section>
 
         <section id="contato">
@@ -46,12 +68,15 @@
                 <button type="submit">Enviar Mensagem</button>
             </form>
         </section>
+        <div class="theme-switch">
+           <button id="toggle-theme">Alternar Modo Escuro</button>
+        </div>
     </main>
 
     <footer>
         <p>&copy; 2026 - Criado para o curso Introduction to Web Development.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
